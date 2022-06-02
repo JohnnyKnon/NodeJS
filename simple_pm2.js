@@ -1,5 +1,5 @@
 const http = require('http')
-const PORT = 14090
+const PORT = 14050
 const server = http.createServer((req, res) => {
     res.setHeader('Content-type', 'application/json; charset=utf-8')
     // JSON 데이터를 반환하는 서버
