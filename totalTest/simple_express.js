@@ -6,6 +6,18 @@ const app = express()
 const PORT = 12000
 const _path = path.join(__dirname, './dist') //dist 폴더 안에 있는 파일들을 서버에 올림, dist라는 폴더에 있는 모든 정적 파일 접근 가능
 // __dirname은 JS가 실행되는 현재 위치를 가리키는 Node.js의 전역 변수
+
+// PATH 모듈
+/*
+    Node.js의 PATH라는 모듈은 파일, 디렉토리에 관한 path들을 조작할 수 있는 좋은 모듈
+    많이 사용되는 메소드는
+
+    join: 받은 매개변수들을 통해 절대 경로를 반환
+
+    resolve: 받은 매개변수들을 연결
+
+*/
+
 console.log(_path)
 
 app.use('/dist', express.static(_path))
